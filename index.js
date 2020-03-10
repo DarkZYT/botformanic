@@ -71,4 +71,4 @@ for (let i = 0; i < config.permLevels.length; i++) {
 
 Object.assign(client, Enmap.multi(['settings', 'enabledCmds'], { ensureProps: true }));
 
-client.login(config.token);
+client.login(process.env.BOT_TOKEN);
