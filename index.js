@@ -11,7 +11,8 @@ client.on('message', message => {
       if (!command) return;
       var args_case = message.content.replace(prefix + command + " ","").split(" ");
       var args = message.content.toLowerCase().replace(prefix + command + " ","").split(" ");
-      if((command === "trade")&&(localchannel == null)){
+      if(command === "trade"){
+        if(localchannel != null){
         var nums = ["0","1","2","3","4","5","6","7","8","9"]
         var code = "";
         code = nums[Math.floor(Math.random()*nums.length)] + nums[Math.floor(Math.random()*nums.length)] + nums[Math.floor(Math.random()*nums.length)] +nums[Math.floor(Math.random()*nums.length)];
@@ -23,6 +24,7 @@ client.on('message', message => {
         setTimeout(function(){localchannel.send("In 2!");},8000);
         setTimeout(function(){localchannel.send("In 1!");},9000);
         setTimeout(function(){localchannel.send("Trade has started! Good luck!"); localchannel = null;},10000);
+        }
       }
 });
 
