@@ -5,7 +5,7 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 const prefix = "!";
-var trade;
+var trade = {started: false};
 
 client.on('message', message => {
       var command = message.content.replace(prefix,"").split(" ")[0];
