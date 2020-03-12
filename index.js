@@ -12,7 +12,7 @@ client.on('message', message => {
       var args_case = message.content.replace(prefix + command + " ","").split(" ");
       var args = message.content.toLowerCase().replace(prefix + command + " ","").split(" ");
       if(command === "trade"){
-        if(localchannel != null){
+        if(localchannel == null){
         var nums = ["0","1","2","3","4","5","6","7","8","9"]
         var code = "";
         code = nums[Math.floor(Math.random()*nums.length)] + nums[Math.floor(Math.random()*nums.length)] + nums[Math.floor(Math.random()*nums.length)] +nums[Math.floor(Math.random()*nums.length)];
